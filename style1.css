@@ -1,6 +1,7 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #e0f7fa;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,58 +10,89 @@ body {
     flex-direction: column;
 }
 
+/* Form Styles */
 form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
 }
 
+form:hover {
+    transform: scale(1.05);
+}
+
+/* Heading Styles */
 h1 {
     margin: 0 0 20px;
-    color: #333;
+    color: #00796b;
+    font-size: 24px;
 }
 
 h2 {
     margin: 10px 0;
-    color: #666;
+    color: #004d40;
+    font-size: 18px;
 }
 
+/* Input Styles */
 input[type="text"] {
     padding: 10px;
     margin: 10px 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 2px solid #004d40;
+    border-radius: 6px;
     width: 100px;
     text-align: center;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
 }
 
+input[type="text"]:focus {
+    border-color: #00796b;
+    outline: none;
+}
+
+/* Button Styles */
 input[type="submit"] {
-    padding: 10px 20px;
+    padding: 12px 24px;
     margin-top: 20px;
-    background-color: #4CAF50;
+    background-color: #00796b;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #004d40;
 }
 
+/* Result Container Styles */
 #resultContainer {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 400px;
 }
 
+/* Result Field Styles */
 #resultfield {
-    font-size: 18px;
-    color: #333;
+    font-size: 20px;
+    color: #00796b;
+    margin: 0;
+    transition: color 0.3s ease-in-out;
+}
+
+#resultfield::before {
+    content: "Answer: ";
+    font-weight: bold;
+    color: #004d40;
 }
